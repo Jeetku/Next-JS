@@ -1,21 +1,23 @@
-"use client";
-
+"use client"
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const LoginPage = () => {
-  const router = useRouter();
-  return (
-    <div>
-      <h1>Login</h1>
-      <div>
-        <Link href="/">Go to Home Page</Link>
-        <br/>
-        <br/>
-        <button onClick={() => router.push("/")}>Go to Home page</button>
-      </div>
-    </div>
-  );
-};
+const Login = () => {
+    const router = useRouter();
+    const navigate = (page) => {
+        router.push("/login/" + page)
+    }
+    return (
+        <div>
+            <h1 className="heading">Login Page</h1>
+            <Link href="/" >Go to Home Page</Link>
+            <br /> <br />
+            <button onClick={() => navigate("studentLogin")} >Go to Student Login Page</button>
+            <br /> <br />
+            <button onClick={() => navigate("teacherLogin")} >Go to Teacher Login Page</button>
 
-export default LoginPage;
+        </div>
+    )
+}
+
+export default Login;
