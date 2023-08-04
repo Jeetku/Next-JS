@@ -9,7 +9,11 @@ export default function Home() {
   const [name, setName] = useState("hello");
 
   const apple = () => {
-    setName("NextJS");
+    if (name === "hello") {
+      setName("NextJS");
+    } else {
+      setName("hello");
+    }
   };
   const router = useRouter();
   const navigate = (name) => {
@@ -20,7 +24,7 @@ export default function Home() {
       <br />
       <h1>Nested Routing {name}</h1>
       <br />
-      <button onClick={apple}>click</button>
+      <button onClick={apple}>Toggle</button>
       <br />
       <br />
       <Link href="/login">Go to Login Page</Link>
