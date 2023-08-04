@@ -31,9 +31,12 @@ export default function Home() {
       <br />
 
       <h1>Fetch Data with API in Client Components</h1>
-      <br />
-      <br />
+
       <Link href="/productsList">Go to Product List</Link>
+      <br />
+      <br />
+      <h1>Fetch Data with API in Server Components</h1>
+      <Link href="/productListSSR">Go to Product List</Link>
     </main>
   );
 }
