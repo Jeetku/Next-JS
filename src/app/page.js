@@ -33,6 +33,11 @@ export default function Home() {
       <Link href="/about">Go to About Page</Link>
       <br />
       <br />
+
+      <h1>Fetch Data with API in Client Components</h1>
+      <br />
+      <br />
+      <Link href="/productsList">Go to Product List</Link>
     </main>
   );
 }
