@@ -9,7 +9,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+import profile from "../../public/vercel.svg";
+
 export default function Home() {
+  // console.log(profile);
   const [name, setName] = useState("hello");
 
   const apple = () => {
@@ -28,6 +31,13 @@ export default function Home() {
       <br />
       <h1>Nested Routing {name}</h1>
       <br />
+
+      <div>
+        <h1 className={Custom.main}>Css Modules in NextJS</h1>
+        <h2 className={extra.main}>Css Modules in NextJS</h2>
+        <h4 className={outside.main}>Css Modules in NextJS</h4>
+      </div>
+      <br />
       <button onClick={apple}>Toggle</button>
       <br />
       <br />
@@ -37,10 +47,16 @@ export default function Home() {
       <Link href="/about">Go to About Page</Link>
       <br />
       <br />
+
       <div>
-        <h1 className={Custom.main}>Css Modules in NextJS</h1>
-        <h2 className={extra.main}>Css Modules in NextJS</h2>
-        <h4 className={outside.main}>Css Modules in NextJS</h4>
+        <Image src={profile} alt="profile" width={500} height={500} />
+        {/* <img src={profile.src} alt="profile" /> */}
+        <Image
+          src="https://www.freeimages.com/photo/forest-1400475"
+          alt="imgae"
+          width={500}
+          height={200}
+        />
       </div>
     </main>
   );
