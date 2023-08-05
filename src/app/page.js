@@ -27,27 +27,28 @@ export default function Home() {
     router.push(name);
   };
   return (
-    <main>
-      <br />
-      <h1>Nested Routing {name}</h1>
-      <br />
+    <>
+      <main>
+        <br />
+        <h1>Nested Routing {name}</h1>
+        <br />
 
-      <div>
-        <h1 className={Custom.main}>Css Modules in NextJS</h1>
-        <h2 className={extra.main}>Css Modules in NextJS</h2>
-        <h4 className={outside.main}>Css Modules in NextJS</h4>
-      </div>
-      <br />
-      <button onClick={apple}>Toggle</button>
-      <br />
-      <br />
-      <Link href="/login">Go to Login Page</Link>
-      <br />
-      <br />
-      <Link href="/about">Go to About Page</Link>
-      <br />
-      <br />
-
+        <div>
+          <h1 className={Custom.main}>Css Modules in NextJS</h1>
+          <h2 className={extra.main}>Css Modules in NextJS</h2>
+          <h4 className={outside.main}>Css Modules in NextJS</h4>
+        </div>
+        <br />
+        <button onClick={apple}>Toggle</button>
+        <br />
+        <br />
+        <Link href="/login">Go to Login Page</Link>
+        <br />
+        <br />
+        <Link href="/about">Go to About Page</Link>
+        <br />
+        <br />
+      </main>
       <div>
         <Image src={profile} alt="profile" width={500} height={500} />
         {/* <img src={profile.src} alt="profile" /> */}
@@ -58,6 +59,6 @@ export default function Home() {
           height={200}
         />
       </div>
-    </main>
+    </>
   );
 }
