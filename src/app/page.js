@@ -1,4 +1,8 @@
 "use client";
+import Custom from "./custom.module.css";
+import extra from "./extra.module.css";
+import outside from "@/style/outside.module.css";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
@@ -33,6 +37,11 @@ export default function Home() {
       <Link href="/about">Go to About Page</Link>
       <br />
       <br />
+      <div>
+        <h1 className={Custom.main}>Css Modules in NextJS</h1>
+        <h2 className={extra.main}>Css Modules in NextJS</h2>
+        <h4 className={outside.main}>Css Modules in NextJS</h4>
+      </div>
     </main>
   );
 }
