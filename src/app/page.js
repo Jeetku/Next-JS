@@ -6,6 +6,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+import profile from "../../public/vercel.svg";
+
 export default function Home() {
   const [name, setName] = useState("hello");
 
@@ -73,6 +75,16 @@ export default function Home() {
         <h4 className={red}>Dummy Text</h4>
         <h4 className={red}>Dummy Text</h4>
         <button onClick={updateColor}>update Color</button>
+      </div>
+      <div>
+        <Image src={profile} alt="profile" width={500} height={500} />
+        {/* <img src={profile.src} alt="profile" /> */}
+        <Image
+          src="https://www.freeimages.com/photo/forest-1400475"
+          alt="imgae"
+          width={500}
+          height={200}
+        />
       </div>
     </main>
   );
