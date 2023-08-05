@@ -5,10 +5,14 @@ import style from "./style.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
-import profile from "../../public/vercel.svg";
+import { poppins } from "next/font/google";
 
 export default function Home() {
+  const poppins = {
+    weight: "100",
+    subset: "latin",
+    display: "swap",
+  };
   const [name, setName] = useState("hello");
 
   const [color, setColor] = useState("red");
@@ -77,14 +81,10 @@ export default function Home() {
         <button onClick={updateColor}>update Color</button>
       </div>
       <div>
-        <Image src={profile} alt="profile" width={500} height={500} />
-        {/* <img src={profile.src} alt="profile" /> */}
-        <Image
-          src="https://www.freeimages.com/photo/forest-1400475"
-          alt="imgae"
-          width={500}
-          height={200}
-        />
+        <h4 style={{ fontFamily: "Poppins", fontWeight: 100 }}>
+          Hello fontOptimization in Next JS
+        </h4>
+        <p className={poppins.className}>Hello fontOptimization in Next JS</p>
       </div>
     </main>
   );
