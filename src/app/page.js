@@ -79,12 +79,12 @@ export default function Home() {
       <div>
         <Image src={profile} alt="profile" width={500} height={500} />
         {/* <img src={profile.src} alt="profile" /> */}
-        <Image
+        {/* <Image
           src="https://www.freeimages.com/photo/forest-1400475"
           alt="imgae"
           width={500}
           height={200}
-        />
+        /> */}
       </div>
     </main>
   );
