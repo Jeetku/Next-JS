@@ -58,34 +58,6 @@ export default function Home() {
       <h1>Fetch Data with API in Server Components</h1>
       <Link href="/productListSSR">Go to Product List</Link>
       <br />
-      <div>
-        <h1 className={color == "red" ? style.red : style.green}>
-          Conditional module Css
-        </h1>
-        <h2
-          style={{
-            backgroundColor: color == "red" ? "red" : "green",
-          }}
-        >
-          Background{" "}
-        </h2>
-        <h3 id={style.orange}>Id attribute Css Module</h3>
-        <h4 className={red}>Dummy Text</h4>
-        <h4 className={red}>Dummy Text</h4>
-        <h4 className={red}>Dummy Text</h4>
-        <h4 className={red}>Dummy Text</h4>
-        <button onClick={updateColor}>update Color</button>
-      </div>
-      <div>
-        <Image src={profile} alt="profile" width={500} height={500} />
-        {/* <img src={profile.src} alt="profile" /> */}
-        {/* <Image
-          src="https://www.freeimages.com/photo/forest-1400475"
-          alt="imgae"
-          width={500}
-          height={200}
-        /> */}
-      </div>
     </main>
   );
 }
